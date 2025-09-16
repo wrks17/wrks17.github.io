@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>库存管理</title>
+  <style>
+    .FBox{
+      margin-left: 350px;
+      margin-top: 100px;
+    }
+    .Head-Button>button{
+      background-color:#007BFF;
+      border-radius: 5px;
+      border: none;
+      height:30px;
+      width: 80px;
+      color:aliceblue
+    }
+    .Text-Part{
+      font-family: "微软雅黑", sans-serif;
+    }
+    .Table-Text>table{
+      border: 1px solid black;
+      width:900px;
+      height:120px;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .Table-Text td{
+      border: 1px solid #ccc;
+
+    }
+    .Table-Text th{
+      border: 1px solid #ccc;
+    }
+    .footer{
+      margin-left: 380px;
+    }
+  </style>
+</head>
+<body>
+<div class = "FBox">
+  <div class = "Head-Button">
+    <button>新增仓库</button>
+  </div>
+
+  <div class = "Text-Part">
+    <table>
+      <tr>
+        <th>
+        <td>仓库编码：</td>
+        <td><input type = "text" placeholder ="请输入仓库编码" style = "height:25px; border-radius: 5px;border:1px solid #ccc;">&nbsp;</td>
+        <td>仓库名称：</td>
+        <td><input type = "text" placeholder ="请输入仓库名称" style = "height:25px; border-radius: 5px;border:1px solid #ccc;">&nbsp;&nbsp;</td>
+        <td><button style ="background-color: #17A2B8; border: none; color: aliceblue; width: 45px; height:30px; border-radius: 5px;">查询</button>&nbsp;&nbsp;</td>
+        <td><button style ="background-color: #17A2B8; border:none; color: aliceblue;width: 45px; height:30px;  border-radius: 5px;">重置</button></td>
+        </th>
+      </tr>
+    </table>
+  </div><br>
+  <div class = "Table-Text">
+    <table>
+      <tr>
+        <th>
+        <td style="background-color: #f2f2f2;">序号</td>
+        <td style="background-color: #f2f2f2;">仓库编码</td>
+        <td style="background-color: #f2f2f2;">仓库名称</td>
+        <td style="background-color: #f2f2f2;">维护人</td>
+        <td style="background-color: #f2f2f2;">维护时间</td>
+        <td style="background-color: #f2f2f2;">备注</td>
+        <td style="background-color: #f2f2f2;">操作</td>
+        </th>
+      </tr>
+      <tr>
+        <th>
+        <td>1</td>
+        <td>2K-5-3-9</td>
+        <td>2号仓库</td>
+        <td>xxx</td>
+        <td>2024-02-28</td>
+        <td>2</td>
+        <td>
+          <button style ="background-color: #17A2B8; border: none; color: aliceblue; width: 45px; height:30px; border-radius: 5px;">修改</button>
+          <button style ="background-color: #DC3545; border: none; color: aliceblue; width: 45px; height:30px; border-radius: 5px;">删除</button>
+        </td>
+        </th>
+      </tr>
+      <tr>
+        <th>
+        <td>2</td>
+        <td>1K-8-3-18</td>
+        <td>1号仓库</td>
+        <td>xxx</td>
+        <td>2024-02-28</td>
+        <td>1</td>
+        <td>
+          <button style ="background-color: #17A2B8; border: none; color: aliceblue; width: 45px; height:30px; border-radius: 5px;">修改</button>
+          <button style ="background-color: #DC3545; border: none; color: aliceblue; width: 45px; height:30px; border-radius: 5px;">删除</button>
+        </td>
+        </th>
+      </tr>
+    </table>
+  </div><br>
+  <div class = "footer">
+    <button>上一页</button>&nbsp;&nbsp;
+    <button>下一页</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/*商品详情*/
+*{
+  margin: 0;
+  padding: 0;
+}
+.adv{
+  height: 560px;
+  padding-top: 50px;
+  padding-left: 15%;
+}
+.adv-1{
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 5px 5px 4px gray;
+  width: 1200px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+.box{
+  width: 400%;
+
+  position: absolute;
+  left: 0;
+  animation: run 10s linear infinite;
+}
+.a>img{
+  width: 1200px;
+  height: 550px;
+}
+.b>img{
+  width: 1200px;
+  height: 550px;
+}
+.c>img{
+  width: 1200px;
+  height: 550px;
+}
+.box>.a{
+  width: 1200px;
+  height: 550px;
+
+  float: left;
+}
+.box>.b{
+  width: 1200px;
+  height: 550px;
+
+  float: left;
+}
+.box>.c{
+  width: 1200px;
+  height: 550px;
+
+  float: left;
+}
+@keyframes run{
+  0%{left: 0%;}
+  20%{left: 0%;}
+  33%{left: -100%;}
+  53%{left: -100%;}
+  66%{left: -200%;}
+  86%{left: -200%;}
+  100%{left: -300%;}
+}
+
+
+.container{
+  height: 710px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+.price-info{
+  padding: 12px 15px;
+  background: linear-gradient(to right, #fff5f5, #fff);
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lowest-price {
+  color: #ff4e22;
+  font-weight: bold;
+  font-size: 16px;
+}
+.history-low {
+  background-color: #ffebe6;
+  color: #ff4e22;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+.sold-count {
+  font-size: 12px;
+  color: #999;
+}
+.free-order{
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  color: #ff4e22;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.product-title{
+  padding: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: 1px solid #f0f0f0;
+}
+.product-info{
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+  color: #999;
+}
+.comments{
+  color: #ff4e22;
+}
+.group-buyers{
+  /* padding: 10px; */
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.group-buyers>ul{
+  width: 100%;
+  height: 500%;
+
+  position: absolute;
+  top: 0%;
+  animation: turn 10s infinite linear;
+}
+.group-buyers ul li{
+  list-style: none;
+  width: 100%;
+  height: 50px;
+}
+@keyframes turn{
+  0%{top: 0%;}
+  20%{top: 0%;}
+  30%{top: -100%;}
+  40%{top: -100%;}
+  50%{top: -200%;}
+  60%{top: -200%;}
+  70%{top: -300%;}
+  80%{top: -300%;}
+  100%{top:-400%;}
+}
+.section-title{
+  padding: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.buyer-name {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.buyer-name-1{
+  margin-right: 36px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.bought-count {
+  font-size: 14px;
+  color: #999;
+}
+.timer{
+  margin-left: 1400px;
+  color: #ff4e22;
+  font-size: 12px;
+  font-weight: bold;
+}
+.follow-buy{
+  background-color: #ff4e22;
+  color: white;
+  border: none;
+  padding: 0px 10px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+.shipping-info {
+  padding: 12px 15px;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.shop-tag {
+  padding: 12px 15px;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+.reviews-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.reviews-title {
+  font-size: 16px;
+}
+
+.view-all {
+  font-size: 12px;
+  color: #999;
+}
+.buyer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-section {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.price-section>a{
+  margin-left: 80%;
+  text-decoration: none;
+  color: white;
+  background-color: #ff4e22;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.limited-price {
+  color: #ff4e22;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.history-low-footer {
+  font-size: 12px;
+  color: #999;
+}
+
+.group-button {
+  background-color: #ff4e22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+

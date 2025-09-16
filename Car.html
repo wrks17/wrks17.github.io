@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>购物车页面</title>
+
+  <!-- 自定义样式 -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .cart {
+      display: flex;
+      gap: 30px;
+    }
+
+    .cart-items {
+      flex: 2;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .item-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .item-details {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    .item-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .item-price {
+      color: #e67e22;
+      font-size: 16px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity-controls button {
+      width: 30px;
+      height: 30px;
+      background: #ddd;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .quantity-controls input {
+      width: 40px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .remove-btn {
+      color: red;
+      cursor: pointer;
+    }
+
+    .summary {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .total {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2ecc71;
+      margin-top: 20px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .checkout-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 style="text-align:center; margin-bottom: 30px;">我的购物车</h1>
+  <div class="cart">
+    <div class="cart-items" id="cart-items">
+      <!-- 示例商品项 -->
+      <div class="cart-item" data-id="1">
+        <img src="https://picsum.photos/id/10/200/200" alt="商品图片" class="item-image">
+        <div class="item-details">
+          <div class="item-name">无线耳机</div>
+          <div class="item-price">¥199.00</div>
+        </div>
+        <div class="quantity-controls">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <input type="number" value="1" min="1" onchange="updateTotal()">
+          <button onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <span class="remove-btn" onclick="removeItem(this)">删除</span>
+      </div>
+
+      <div class="cart-item" data-id="2">
+        <img src="https://picsum.photos/id/20/200/200" alt="商品图片" class="item-image">
+        <div class="item-details">
+          <div class="item-name">智能手表</div>
+          <div class="item-price">¥399.00</div>
+        </div>
+        <div class="quantity-controls">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <input type="number" value="1" min="1" onchange="updateTotal()">
+          <button onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <span class="remove-btn" onclick="removeItem(this)">删除</span>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h2>订单摘要</h2>
+      <div class="summary-line">
+        <span>商品小计</span>
+        <span id="subtotal">¥598.00</span>
+      </div>
+      <div class="summary-line">
+        <span>运费</span>
+        <span>¥0.00</span>
+      </div>
+      <div class="summary-line">
+        <span>优惠券</span>
+        <span>-¥0.00</span>
+      </div>
+      <hr>
+      <div class="summary-line total">
+        <span>总计</span>
+        <span id="total">¥598.00</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">立即结算</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 修改数量
+  function changeQuantity(button, delta) {
+    const input = button.parentElement.querySelector('input');
+    let value = parseInt(input.value);
+    if (value + delta >= 1) {
+      input.value = value + delta;
+      updateTotal();
+    }
+  }
+
+  // 删除商品
+  function removeItem(button) {
+    const item = button.closest('.cart-item');
+    item.style.opacity = '0';
+    setTimeout(() => {
+      item.remove();
+      updateTotal();
+    }, 300);
+  }
+
+  // 更新总价
+  function updateTotal() {
+    const items = document.querySelectorAll('.cart-item');
+    let subtotal = 0;
+
+    items.forEach(item => {
+      const price = parseFloat(item.querySelector('.item-price').textContent.replace('¥', ''));
+      const quantity = parseInt(item.querySelector('input').value);
+      subtotal += price * quantity;
+    });
+
+    document.getElementById('subtotal').textContent = `¥${subtotal.toFixed(2)}`;
+    document.getElementById('total').textContent = `¥${subtotal.toFixed(2)}`;
+  }
+
+  // 模拟结算
+  function checkout() {
+    alert("正在跳转支付...");
+    // 可替换为 window.location.href 或其他逻辑
+  }
+
+  // 初始化
+  window.addEventListener('DOMContentLoaded', updateTotal);
+</script>
+
+</body>
+</html>

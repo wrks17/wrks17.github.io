@@ -1,0 +1,183 @@
+/*留言*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  background-color: #F5F7FA;
+}
+.Box{
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+header{
+  border-bottom: 1px solid #E1E4E8;
+}
+header>span{
+  color: #999;
+}
+.Input-Bottom>button{
+  border-radius: 20px;
+  background-color: #fff;
+  width: 70px;
+  height: 30px;
+  border: 1px solid #999;
+}
+.Input-Bottom>input{
+  border-radius: 20px;
+  width:210px;
+  height: 30px;
+  float: right;
+  border: 1px solid #999;
+}
+.Search{
+  position: relative;
+  left:774px;
+}
+.fa-search{
+  color: #999;
+}
+button:nth-of-type(1)
+{
+  background-color: #3498DB;
+  color: #fff;
+}
+.Main-Content{
+  display: flex;
+  flex-direction: column ;
+  /* border: 1px solid black; */
+  height: 1100px;
+}
+.main-son1{
+  flex: 1.4;
+  width: 1200px;
+  /* border: 1px solid black; */
+  box-shadow: 0 3px 7px #888;
+}
+.main-son1:hover{
+  transform: translateY(-3px);
+}
+.main-son2:hover{
+  transform: translateY(-3px);
+}
+.main-son3:hover{
+  transform: translateY(-3px);
+}
+.main-son4:hover{
+  transform: translateY(-3px);
+}
+.main-son2{
+  flex: 2;
+  width: 1200px;
+  /* border: 1px solid black; */
+  box-shadow: 0 3px 7px #888;
+  margin-top: 10px;
+
+}
+.main-son3{
+  flex:1.4;
+  width: 1200px;
+  /* border: 1px solid black; */
+  box-shadow: 0 3px 7px #888;
+  margin-top: 10px;
+
+}
+.main-son4{
+  flex: 2;
+  width: 1200px;
+  /* border: 1px solid black; */
+  box-shadow: 0 3px 7px #888;
+  margin-top: 10px;
+}
+.Image-K{
+  position: relative;
+  left: 35px;
+  top:20px;
+}
+.Image-K>img{
+  border-radius: 50%;
+}
+.Text-Kua{
+  position: absolute;
+  left:56px;
+  top:-2px;
+}
+.Text-Kua>button{
+  margin-left: 1020px;
+  position: relative;
+  top:-20px;
+  border-radius: 20px;
+  background-color: #FDEDEB;
+  color: red;
+  width: 60px;
+  height:30px;
+  border: none;
+
+}
+.Text-Part{
+  text-indent: 48px;
+}
+.Booter>button{
+  border-radius: 5px;
+  width: 80px;
+  height: 32px;
+  border: none;
+}
+.fa-reply{
+  position: absolute;
+  left:6px;
+  top:8px;
+  color: #fff;
+}
+.fa-trash{
+  position: absolute;
+  left:92px;
+  top:8px;
+  color: #888;
+}
+.Booter{
+  float: right;
+  position: relative;
+  margin-right:30px;
+}
+.Text-Kua-1>button{
+  margin-left: 1020px;
+  position: relative;
+  top:-20px;
+  border-radius: 20px;
+  background-color: #EAFAF1;
+  color:#46CE7D ;
+  width: 60px;
+  height:30px;
+  border: none;
+
+}
+.Text-Kua-1{
+  position: absolute;
+  left:56px;
+  top:-2px;
+}
+.footer>button{
+  width:50px;
+  height: 50px;
+  background-color:#fff ;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+.footer{
+  margin: 60px 395px;
+}
+.footer>button:nth-of-type(1){
+  background-color: #3498DB;
+}
+.Footer-Top{
+  border-top: 1px dashed #999;
+}
+.Fot-Content{
+  background-color: #F9F9F9;
+  height: 30px;
+  width: 1100px;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="./css/UserStyle.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-content">
+    <ul class="nav-links">
+      <li><a href="Home.html">首页</a></li>
+      <li><a href="Car.html">购物车</a></li>
+      <li><a href="">购买记录</a></li>
+      <li><a href="">我要卖货</a></li>
+      <li><a href="">联系客服</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="请输入商品名称或关键词">
+      <button>搜索</button>
+    </div>
+  </div>
+</div>
+<section>
+  <!-- 左侧菜单 -->
+  <div class="box"></div>
+  <div id="menu">
+    <dl class="fore1">
+      <dt>订单中心</dt>
+      <dd><a href="">我的订单</a></dd>
+      <dd><a href="">订单评价</a></dd>
+    </dl>
+    <dl class="fore2">
+      <dt>我的关注</dt>
+      <dd><a href="">关注商品</a></dd>
+      <dd><a href="">关注商家</a></dd>
+    </dl>
+    <dl class="fore3">
+      <dt>客户服务</dt>
+      <dd><a href="">发票管理</a></dd>
+      <dd><a href="">购买记录</a></dd>
+      <dd><a href="">退货记录</a></dd>
+      <dd><a href="">联系客服</a></dd>
+      <dd><a href="">举报中心</a></dd>
+      <dd><a href="">意见反馈</a></dd>
+    </dl>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="info-container">
+      <div class="user-info">
+        <div class="avatar-container" id="avatarContainer">
+          <img id="avatar" class="avatar" src="img/default.jpg" alt="">
+          <input type="file" id="avatarInput" accept="image/*" onchange="previewAvatar(event)">
+        </div>
+        <div class="username">baidu.com</div>
+        <div class="membership">尚未开通会员</div>
+
+        <div class="other-info">
+          <button>查看会员详情</button>
+          <button>立即开通会员</button>
+        </div>
+      </div>
+
+
+      <div class="account-info">
+        <div class="account-title">我的账户</div>
+        <ul class="account-content">
+          <li><a href="">我的优惠券 <span style="color: red;float: right;">(2张)</span></a></li>
+          <li><a href="">账户余额 <span style="color: green;float: right;">￥500.00</span></a></li>
+          <li><a href="">地址<span style="color: #333;float: right;">哈尔滨</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="order-status">
+      <div class="order-status-item">
+        <a href=""><img src="img/money.png" alt="待付款"></a>
+        <p><a href="">待付款</a></p>
+      </div>
+      <div class="order-status-item">
+        <a href=""><img src="img/box.png" alt="待收货"></a>
+        <p><a href="">待收货</a></p>
+      </div>
+      <div class="order-status-item">
+        <a href=""><img src="img/chat.png" alt="待评价"></a>
+        <p><a href="">待评价</a></p>
+      </div>
+      <div class="order-status-item">
+        <a href=""><img src="img/safe.png" alt="退换/售后"></a>
+        <p><a href="">退换/售后</a></p>
+      </div>
+    </div>
+
+
+    <div class="cart-empty">
+      <a href="Car.html">  <p>您买的东西太少了，这里都空空的。</p></a>
+    </div>
+  </div>
+
+  <div class="right-sidebar">
+    <h3>足迹与收藏</h3>
+    <ul>
+      <li><a href="#">浏览记录</a></li>
+      <li><a href="#">商品收藏</a></li>
+      <li><a href="Car.html" target="_blank">我的购物车</a></li>
+    </ul>
+
+    <h3 style="margin-top: 20px;">常买清单</h3>
+
+    <div class="rm">
+      <a href="Product.html" target="_blank">
+       <img src="img/11.jpg" alt=""></a></div>
+    <h3 style="margin-top: 20px;">购物推荐</h3>
+    <div class="rm"><a href=""> <img src="img/22.jpg" alt=""></a></div>
+  </div>
+  </div>
+  <script>
+
+    const avatarContainer = document.getElementById('avatarContainer');
+    const avatarInput = document.getElementById('avatarInput');
+
+    avatarContainer.addEventListener('click', function () {
+      avatarInput.click();
+    });
+
+    function previewAvatar(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const avatar = document.getElementById('avatar');
+          avatar.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+
+    const usernameDiv = document.querySelector('.username');
+    usernameDiv.addEventListener('dblclick', function () {
+      if (this.querySelector('input')) return;
+
+      const oldText = this.textContent;
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = oldText;
+      input.style.border = '1px solid #ccc';
+      input.style.borderRadius = '4px';
+
+      this.textContent = '';
+      this.appendChild(input);
+      input.focus();
+
+      const saveText = () => {
+        const newText = input.value.trim();
+        this.textContent = newText || oldText;
+      };
+
+      input.addEventListener('blur', saveText);
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          saveText();
+        }
+      });
+    });
+  </script>
+</section>
+<footer>
+  <div class="ft">
+    <ul>
+      <li><img src="./img/2.jpg" alt="" /><a href=""><p>正品保障,</p><span>正品保障,提供发票</span></a></li>
+      <li><img src="./img/4.jpg" alt="" /><a href=""><p>正品保障</p><span>30天包退,365天包换</span></a></li>
+      <li><img src="./img/5.jpg" alt="" /><a href=""><p>正品保障</p><span>私人定制家电套餐</span></a></li>
+      <li><img src="./img/6.jpg" alt="" /><a href=""><p>正品保障</p><span>你的购物指南</span></a></li>
+    </ul>
+  </div>
+  <div class="fb">
+    <a href=""><dl>
+      <dt>购物指南</dt>
+      <dd>保障范围</dd>
+      <dd>购物流程</dd>
+      <dd>会员介绍</dd>
+      <dd>生活旅行</dd>
+      <dd>常见问题</dd>
+      <dd>联系客服购物指南</dd>
+    </dl>
+      <dl>
+        <dt>特色服务</dt>
+        <dd>保障范围</dd>
+        <dd>购物流程</dd>
+        <dd>会员介绍</dd>
+        <dd>生活旅行</dd>
+        <dd>常见问题</dd>
+        <dd>联系客服购物指南</dd>
+      </dl>
+      <dl>
+        <dt>帮助中心</dt>
+        <dd>保障范围</dd>
+        <dd>购物流程</dd>
+        <dd>会员介绍</dd>
+        <dd>生活旅行</dd>
+        <dd>常见问题</dd>
+        <dd>联系客服购物指南</dd>
+      </dl>
+      <dl>
+        <dt>新手指导</dt>
+        <dd>保障范围</dd>
+        <dd>购物流程</dd>
+        <dd>会员介绍</dd>
+        <dd>生活旅行</dd>
+        <dd>常见问题</dd>
+        <dd>联系客服购物指南</dd>
+      </dl>
+    </a>
+  </div>
+  <div class="ff">
+    <p>Copyright ©2020版权所有@博汇商城 蜀ICP备0000000</p>
+    <p>本网站直接或间接向消费者推销商品或者服务的商业宣传均属于“广告” （包装及参数，售后保障等商品信息除外）</p>
+  </div>
+</footer>
+</body>
+</html>

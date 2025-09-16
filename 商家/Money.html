@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .Root-FBox {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .Top-Part{
+      display: flex;
+      gap: 12px;
+    }
+    .Top-Part>div{
+      width: 300px;
+      height:100px;
+      background-color: #FFF;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 1px 5px 3px #eaeaea ;
+    }
+    .Top-Part>div>.Span-Part
+    {
+      list-style-type: none;
+      margin-left: 20px;
+      margin-top: 23px;
+      font-size: 12px;
+      font-weight: lighter;
+      color: black;
+    }
+    .fa-bank{
+      float: right;
+      margin-right: 15px;
+
+    }
+    .fa-arrow-down{
+      float: right;
+      margin-right: 15px;
+    }
+    .fa-arrow-up{
+      float: right;
+      margin-right: 15px;
+    }
+    .Body-Content{
+      margin-top: 20px;
+      width: 1200px;
+      height: 300px;
+      margin-left: 20px;
+      flex-direction: row;
+    }
+    table{
+      margin-left: -90px;
+      border-collapse: collapse;
+      width: 1200px;
+    }
+    th{
+      border-collapse: collapse;
+      width: 1200px;
+
+    }
+    td{
+      border-bottom: 1px solid #888;
+      width: 1200px;
+    }
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class = "Root-FBox">
+  <div class = "Text-Top">
+    <span style = "font-size: 25px; font-weight: bolder;">财务管理</span><br>
+    <span style="color:#999">查看和管理您的财务状况</span>
+  </div><br>
+  <div class="Top-Part">
+    <div>
+      <li class = "Span-Part">
+        <span>总资产</span><br>
+        <span style="font-weight: bolder;font-size: 20px;">￥128,560.456</span>&nbsp;&nbsp;&nbsp;
+      </li>
+      <i class="fa fa-bank text-primary text-xl"></i>
+    </div>
+    <div>
+      <li class = "Span-Part">
+        <span>本月收入</span><br>
+        <span style="font-weight: bolder;font-size: 20px;">￥128,560.456</span>&nbsp;&nbsp;&nbsp;
+      </li>
+      <i class="fa fa-arrow-down text-success text-xl"></i>
+    </div>
+    <div>
+      <li class = "Span-Part">
+        <span>本月支出</span><br>
+        <span style="font-weight: bolder;font-size: 20px;">￥128,560.456</span>&nbsp;&nbsp;&nbsp;
+      </li>
+      <i class="fa fa-arrow-up text-danger text-xl"></i>
+    </div>
+    <div>
+      <li class = "Span-Part">
+        <span>净收入</span><br>
+        <span style="font-weight: bolder;font-size: 20px;">￥128,560.456</span>&nbsp;&nbsp;&nbsp;
+      </li>
+      <i class="fa fa-bank text-primary text-xl"></i>
+    </div>
+  </div>
+  <div class = "Body-Content">
+    <table>
+      <tr>
+        <th>
+        <td>交易时间</td>
+        <td>描述</td>
+        <td>分类</td>
+        <td>全额</td>
+        <td>账户</td>
+        </th>
+      </tr>
+      <tr>
+        <th>
+        <td>2024-02-26 15:30</td>
+        <td>超市购物</td>
+        <td style="color:red">支出</td>
+        <td style="color:red">￥-356.80</td>
+        <td>招商银行</td>
+        </th>
+      </tr>
+      <tr>
+        <th>
+        <td>2024-02-26 15:30</td>
+        <td>工资入账</td>
+        <td style="color:aquamarine">收入</td>
+        <td style="color:aquamarine">+￥12,500.00</td>
+        <td>工商银行</td>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

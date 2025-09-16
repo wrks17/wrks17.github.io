@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="../登录注册/LoginStyle.css">
+</head>
+<body>
+<div class="login-container">
+  <h2>用户登录</h2>
+  <input type="text" id="username" placeholder="请输入账号">
+  <input type="password" id="password" placeholder="请输入密码">
+  <input type="text" id="inviteCode" placeholder="请输入邀请码（可选）">
+  <button onclick="handleLogin()">登录</button>
+</div>
+<script>
+  function handleLogin() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const inviteCode = document.getElementById('inviteCode').value;
+    // 验证账号和密码（这里简化为非空验证）
+    if (username === '' || password === '') {
+      alert('账号和密码不能为空！');
+      return;
+    }
+    if (inviteCode === '') {
+      window.location.href = '../Home.html';
+    } else if (inviteCode === 'admin') {
+      window.location.href = '../商家/Manager.html';
+    } else {
+      alert('无效的邀请码！');
+    }
+  }
+</script>
+</body>
+</html>

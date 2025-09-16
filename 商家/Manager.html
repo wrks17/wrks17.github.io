@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商家功能管统</title>
+  <link rel="stylesheet" href="../商家/ManagerStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<aside class="Sidebar">
+  <div class="sidebar-header">
+    <h1><span class="icon"><i class="fas fa-store"></i></span>商家管理系统</h1>
+  </div>
+  <ul class="nav-menu">
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+        <span>控制台</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="Recruitment.html" target="_blank" class="nav-link ">
+        <span class="icon"><i class="fas fa-user-tie"></i></span>
+        <span>招聘管理</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="Money.html" TARGET="_blank" class="nav-link ">
+        <span class="icon"><i class="fas fa-money-bill-wave"></i></span>
+        <span>财务管理</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="Inventory.html" target="_blank" class="nav-link ">
+        <span class="icon"><i class="fas fa-boxes"></i></span>
+        <span>库存管理</span>
+      </a>
+    </li> <li class="nav-item">
+    <a href="Sation.html" target="_blank" class="nav-link ">
+      <span class="icon"><i class="fas fa-comments"></i></span>
+      <span>留言管理</span>
+    </a>
+  </li>
+  </ul>
+</aside>
+
+<main class="main-content">
+  <header class="header">
+    <h2 class="page-title">商家功能控制台</h2>
+    <div class="user-info">
+      <div class="user-avatar">商</div>
+      <span>商家管理员</span>
+    </div>
+  </header>
+
+  <div class="dashboard">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">招聘管理</h3>
+        <div class="card-icon icon-recruitment">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card-stats">
+        <div class="stat-number">12</div>
+        <div class="stat-label">待处理简历</div>
+      </div>
+      <div class="card-action">
+        <a href="Recruitment.html" target="_blank"><span>查看详情</span></a>
+        <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">财务管理</h3>
+        <div class="card-icon icon-finance">
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+      <div class="card-stats">
+        <div class="stat-number">¥28,500</div>
+        <div class="stat-label">本月营收</div>
+      </div>
+      <div class="card-action">
+        <a href="Money.html" target="_blank">
+          <span>查看详情</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">库存管理</h3>
+        <div class="card-icon icon-inventory">
+          <i class="fas fa-boxes"></i>
+        </div>
+      </div>
+      <div class="card-stats">
+        <div class="stat-number">8</div>
+        <div class="stat-label">库存不足商品</div>
+      </div>
+      <div class="card-action">
+        <a href = "Inventory.html" target="_blank">
+          <span>查看详情</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">留言管理</h3>
+        <div class="card-icon icon-message">
+          <i class="fas fa-comments"></i>
+        </div>
+      </div>
+      <div class="card-stats">
+        <div class="stat-number">24</div>
+        <div class="stat-label">未回复留言</div>
+      </div>
+      <div class="card-action">
+        <a href = "Sation.html" target="_blank">
+          <span>查看详情</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content-section">
+    <div class="section-header">
+      <h3 class="section-title">最近操作记录</h3>
+      <button class="btn btn-primary">查看全部</button>
+    </div>
+    <table class="data-table">
+      <thead>
+      <tr>
+        <th>操作时间</th>
+        <th>操作类型</th>
+        <th>操作内容</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2023-06-28 14:30</td>
+        <td>招聘管理</td>
+        <td>回复了求职者"李明"的申请</td>
+        <td>成功</td>
+        <td>
+          <button class="action-btn view-btn">查看</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2023-06-28 11:15</td>
+        <td>财务管理</td>
+        <td>查询了6月份收支明细</td>
+        <td>成功</td>
+        <td>
+          <button class="action-btn view-btn">查看</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2023-06-27 16:45</td>
+        <td>库存管理</td>
+        <td>更新了"商品A"的库存数量</td>
+        <td>成功</td>
+        <td>
+          <button class="action-btn view-btn">查看</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2023-06-27 10:20</td>
+        <td>留言管理</td>
+        <td>回复了用户"王华"的留言</td>
+        <td>成功</td>
+        <td>
+          <button class="action-btn view-btn">查看</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+</body>
+</html>
